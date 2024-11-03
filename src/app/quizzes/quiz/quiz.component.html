@@ -1,0 +1,22 @@
+@if (isSolvingQuiz) {
+    <app-solve-quiz [quiz]="quiz" (cancel)="onCancelQuiz()" (solve)="onSolveQuiz($event)"/>
+}
+
+@if (isQuizResults) {
+    <app-quiz-result [isSolved]="isQuizSolved === true" (cancel)="onCancelQuizResults()"/>
+}
+
+<app-card>
+    <article>
+        <h2>{{quiz.question}}</h2>
+        <ul>
+            @for (option of quiz.options; track option) {
+                <li>{{option}}</li>
+            }
+        </ul>
+        <!-- <p>{{quiz.options}}</p> -->
+        <p class="actions">
+            <button (click)="onCompleteQuiz()">Solve</button>
+        </p>
+    </article>
+</app-card>

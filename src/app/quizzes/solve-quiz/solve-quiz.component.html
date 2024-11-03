@@ -1,0 +1,20 @@
+<div class="backdrop" (click)="onCancel()"></div>
+<dialog open>
+    <h2>Solve Quiz</h2>
+    <h2>{{quiz.question}}</h2>
+    <div class="quiz-options">
+        @for (option of quiz.options; track option; let answerIdx = $index) {
+        <app-card>
+            <button [class.active]="answerIdx === selectedOption" (click)="onOptionClick(answerIdx)">
+                <span>{{ option }}</span>
+            </button>
+        </app-card>
+        }
+    </div>
+    <p class="actions">
+        @if (selectedOption !== undefined) {
+            <button (click)="onSolve()">Submit</button>
+            }
+            <button (click)="onCancel()">Cancel</button>
+    </p>
+</dialog>

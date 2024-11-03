@@ -1,0 +1,12 @@
+<section id="quizzes">
+    <header>
+        <h2>Hi {{ userName }}!</h2>
+    </header>
+    <ul>
+        @for (quiz of selectedUserQuizzes; track quiz.id) {
+            <li>
+                <app-quiz [quiz]="quiz" [user]="selectedUser"/>
+            </li>
+        }
+    </ul>
+</section>

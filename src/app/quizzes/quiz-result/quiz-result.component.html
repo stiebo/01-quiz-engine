@@ -1,0 +1,12 @@
+<div class="backdrop" (click)="onCancel()"></div>
+<dialog open>
+    @if (isSolved) {
+    <h2>Congratulation, that is correct!</h2>
+    } @else {
+    <h2>Sorry, that was wrong. Try again.</h2>
+    }
+    <p class="actions">
+        <button (click)="onCancel()">Continue</button>
+</p>
+
+</dialog>

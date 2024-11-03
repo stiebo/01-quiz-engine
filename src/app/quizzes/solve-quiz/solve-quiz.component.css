@@ -1,0 +1,106 @@
+.backdrop {
+  background-color: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+dialog {
+  width: 90%;
+  max-width: 30rem;
+  background-color: #bf9ee5;
+  border-radius: 6px;
+  border: none;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  padding: 1rem;
+  top: 5rem;
+}
+
+h2 {
+  margin: 0;
+  color: #25113d;
+}
+
+.actions {
+  margin: 1rem 0 0;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end; 
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+  border: none;
+  padding: 0.35rem 1.25rem;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.actions button {
+  font: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+  background-color: #380774;
+  color: #decdf2;
+  border-radius: 4px;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.actions button:hover,
+.actions button:active {
+  background-color: #4a0774;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+}
+
+.quiz-options {
+  display: flex;
+  flex-direction: column; 
+  gap: 0.25rem;
+}
+
+
+.quiz-options button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.5rem;
+  background-color: #4a0774;
+  color: #decdf2;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  width: 100%;
+  min-width: 10rem;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.quiz-options button:hover,
+.quiz-options button:active {
+  background-color: #3086f6;
+}
+
+.quiz-options button.active {
+  background-color: #073674;
+}
+
+
+span {
+  margin: 0;
+  padding: 0;
+  font-size: 0.8rem;
+  font-weight: normal;
+}
+
+@media (min-width: 768px) {
+  dialog {
+    padding: 2rem;
+  }
+}
